@@ -1,0 +1,12 @@
+{
+  "name": "@codexporer.io/expo-slider",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "react": "*",
+    "styled-components": "*",
+    "rn-range-slider": "*",
+    "color": "*",
+    "react-native-paper": "*"
+  }
+}
