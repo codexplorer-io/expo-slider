@@ -7,7 +7,8 @@ import {
     PanResponderGestureState,
     LayoutChangeEvent,
     StyleProp,
-    ViewStyle
+    ViewStyle,
+    ColorValue
 } from 'react-native';
 
 const THUMB_RADIUS = 14;
@@ -44,11 +45,11 @@ const renderThumbDefault = () => (
     <View style={styles.defaultThumb} />
 );
 
-const createRenderRailDefault = ({ sliderRailUnselectedColor }) => () => (
+const createRenderRailDefault = ({ sliderRailUnselectedColor }: { sliderRailUnselectedColor: ColorValue }) => () => (
     <View style={[styles.defaultRail, { backgroundColor: sliderRailUnselectedColor }]} />
 );
 
-const createRenderRailSelectedDefault = ({ sliderRailSelectedColor }) => () => (
+const createRenderRailSelectedDefault = ({ sliderRailSelectedColor }: { sliderRailSelectedColor: ColorValue }) => () => (
     <View style={[styles.defaultRailSelected, { backgroundColor: sliderRailSelectedColor }]} />
 );
 
@@ -190,18 +191,6 @@ export const Slider: React.FC<SliderProps> = ({
             }
         }
     }), []);
-
-    const defaultRail = (
-        <View style={[styles.defaultRail, { backgroundColor: sliderRailUnselectedColor }]} />
-    );
-
-    const defaultRailSelected = (
-        <View style={[styles.defaultRailSelected, { backgroundColor: sliderRailSelectedColor }]} />
-    );
-
-    const defaultThumb = (
-        <View style={styles.defaultThumb} />
-    );
 
     const selectedRailStyle = disableRange
         ? {
