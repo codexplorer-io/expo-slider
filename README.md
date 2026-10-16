@@ -86,14 +86,14 @@ export function FrequencyFilter() {
 | `max` | `number` | `1` | Maximum slider value |
 | `step` | `number` | `0.01` | Value increment interval |
 | `low` | `number` | `0` | Lower thumb value (or single value when `disableRange` is true) |
-| `high` | `number` | — | Upper thumb value (in range mode) |
-| `disableRange` | `boolean` | `false` | When true, renders single thumb slider |
+| `high` | `number` | `max` | Upper thumb value (in dual-thumb range mode) |
+| `disableRange` | `boolean` | `true` | When true (default), renders single thumb slider; when false, renders range slider |
 | `onValueChanged` | `(low: number, high: number, fromUser: boolean) => void` | — | Callback invoked when value changes |
-| `sliderRailSelectedColor` | `string` | `'#4499ff'` | Color of the active highlighted track |
-| `sliderRailUnselectedColor` | `string` | `'#e0e0e0'` | Color of the inactive background track |
-| `renderThumb` | `(name: 'low' \| 'high') => ReactNode` | — | Custom render function for thumb handle |
-| `renderRail` | `() => ReactNode` | — | Custom render function for background rail |
-| `renderRailSelected` | `() => ReactNode` | — | Custom render function for active rail |
+| `sliderRailSelectedColor` | `string` | `'#01579B'` | Color of the active highlighted track |
+| `sliderRailUnselectedColor` | `string` | `'rgba(255, 255, 255, 0.2)'` | Color of the inactive background track |
+| `renderThumb` | `(name: 'low' \| 'high') => React.ReactNode` | — | Custom render function for thumb handle |
+| `renderRail` | `() => React.ReactNode` | — | Custom render function for background rail |
+| `renderRailSelected` | `() => React.ReactNode` | — | Custom render function for active rail |
 | `style` | `StyleProp<ViewStyle>` | — | Container style |
 
 ## License
